@@ -1,4 +1,4 @@
-### Add ai studion api key: .env file
+### Add AI Studio api key: `.env` file
 ``` bash
 VITE_API_KEY=AIzaSy289xvwVxAsymV9kQCsWNUqB-HGEWZtuGes
 ```
