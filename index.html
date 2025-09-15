@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini AI Stream Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            typography: ({ theme }) => ({
+              invert: {
+                css: {
+                  '--tw-prose-body': theme('colors.gray[300]'),
+                  '--tw-prose-headings': theme('colors.white'),
+                  '--tw-prose-links': theme('colors.cyan[400]'),
+                  '--tw-prose-bold': theme('colors.white'),
+                  '--tw-prose-counters': theme('colors.gray[400]'),
+                  '--tw-prose-bullets': theme('colors.gray[600]'),
+                  '--tw-prose-hr': theme('colors.gray[700]'),
+                  '--tw-prose-quotes': theme('colors.gray[200]'),
+                  '--tw-prose-quote-borders': theme('colors.gray[600]'),
+                  '--tw-prose-captions': theme('colors.gray[400]'),
+                  '--tw-prose-code': theme('colors.cyan[300]'),
+                  '--tw-prose-pre-code': theme('colors.gray[300]'),
+                  '--tw-prose-pre-bg': 'transparent', // We handle pre background in component
+                  '--tw-prose-th-borders': theme('colors.gray[600]'),
+                  '--tw-prose-td-borders': theme('colors.gray[700]'),
+
+                  // Headers and Paragraphs margin
+                  'h1, h2, h3, h4, h5, h6': {
+                    marginTop: '1.5em',
+                    marginBottom: '0.6em',
+                  },
+                  'p, ul, ol, blockquote, figure, table': {
+                    marginTop: '0.8em',
+                    marginBottom: '0.8em',
+                  },
+
+                  // Inline code background
+                  ':not(pre) > code': {
+                    padding: '0.2em 0.4em',
+                    backgroundColor: theme('colors.gray[700]/70'),
+                    borderRadius: '0.25rem',
+                    fontWeight: '500',
+                  },
+                  'code::before': { content: '""' },
+                  'code::after': { content: '""' },
+                  
+                  // Table styling
+                  'thead': {
+                    borderBottomColor: theme('colors.gray[600]'),
+                  },
+                  'thead th': {
+                    backgroundColor: theme('colors.gray[800]'),
+                    fontWeight: '600',
+                    color: theme('colors.gray[100]'),
+                  },
+                  'tbody tr:nth-child(even)': {
+                    backgroundColor: theme('colors.gray[800]/50'),
+                  },
+                  'tbody tr:hover': {
+                    backgroundColor: theme('colors.gray[700]/50'),
+                  },
+                },
+              },
+            }),
+          },
+        },
+        plugins: [
+          tailwind.plugins.typography,
+        ],
+      }
+    </script>
+  </head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1?bundle",
+    "remark-gfm": "https://esm.sh/remark-gfm@4.0.0?bundle",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

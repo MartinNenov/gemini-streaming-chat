@@ -1,0 +1,9 @@
+.twitter-tweet{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    display: none !important;
+}
+
+.twitter-tweet:first-of-type {
+    display: flex !important;
+}
