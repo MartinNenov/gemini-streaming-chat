@@ -73,7 +73,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isLoading = false })
         {isUserModel ? <UserIcon className="w-5 h-5" /> : <BotIcon className="w-5 h-5" />}
       </div>
       <div className={bubbleClasses}>
-        {isLoading && message.content === '' ? (
+        {(isLoading || message.content === '') ? (
           <LoadingIndicator />
         ) : (
           <article className={"prose prose-invert prose-sm md:prose-base max-w-none overflow-hidden " + articleClasses}>
